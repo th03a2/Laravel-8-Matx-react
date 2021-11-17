@@ -16,7 +16,18 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
 <h2>Step 1: Set up Laravel into SPA</h2>
 <h2>Update pages</h2>
  <pre>a. Update the resources/view/welcome.blade.php.</pre>
- <pre>b. set the routes/web.php "Route::get('/{any}', function () {return view('react');})->where('any', '.*');" to have single pages only.</pre>
+  <span>   check the source code.  </span>
+ <pre>b. set the routes/web.php</pre>
+   <pre>
+       Route::get('/', function () {
+          return view('welcome');
+      });
+    </pre>
+   <pre>
+       // to have single pages only.
+        Route::get('/{any}', function () {return view('welcome');})->where('any', '.*');
+        Auth::routes();
+   </pre>
 <h2>Then in the project root folder, you need to run the following commands. (*** run only in git bash)</h2>
 <pre>composer require laravel/ui</pre>
 <pre>php artisan ui react </pre>
@@ -24,13 +35,14 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
 <pre>npm install laravel-mix@latest --save-dev</pre>
 <pre>npm install && npm run dev</pre>
  
-<h2>Step 2: Update dependencies</h2>
+<h2>Step 2: Update Laravel dependencies</h2>
 <pre> Go to package.json file</pre>
-<pre>On your Laravel project, open the Package.json and update the dependencies by combining all react dependencies with laravel 8</pre>
+<pre>On your react Package.json, copy all dependencies and add to laravel Package.json dependencies to combine all react dependencies with laravel 8</pre>
 
-<h2>Step 3: Update devDependencies</h2>
+<h2>Step 3: Update Laravel devDependencies</h2>
 <pre> Go to package.json file</pre>
-<pre>On your Laravel project, open the Package.json and update the devDependencies by combining all react devDependencies with laravel 8</pre>
+<pre>On your both project, open the Package.json and update the devDependencies
+      by combining all react devDependencies with laravel 8</pre>
    
  <h2>Step 5: create new page name ".babelrc"</h2>
   <pre>create .babelrc on the project</pre>
@@ -53,20 +65,9 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
   <pre>
   const mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
-
-mix.js('resources/js/app.js', 'public/js')
-    .react()
-    .sass('resources/sass/app.scss', 'public/css');
+  mix.js('resources/js/app.js', 'public/js')
+      .react()
+      .sass('resources/sass/app.scss', 'public/css');
   </pre>
  <h2>Step 7: npm run development</h2>
  <h2>Step 8: npm run watch</h2>
