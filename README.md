@@ -31,8 +31,9 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
 <h2>Then in the project root folder, you need to run the following commands. (*** run only in git bash)</h2>
 <pre>composer require laravel/ui</pre>
 <pre>php artisan ui react </pre>
-  <span>**If your Laravel version is lower than 7, you need to run “php artisan preset react” instead</span>
-<pre>npm install laravel-mix@latest --save-dev</pre>
+ <pre>npm install laravel-mix@latest --save-dev</pre>
+  <span>**If your Laravel version is lower than 7, you need to run “php artisan preset react”</span>
+
 <pre>npm install && npm run dev</pre>
  
 <h2>Step 2: Update Laravel dependencies</h2>
@@ -63,11 +64,26 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
 }</pre>
  <h2>Step 6: update webpack.mix.js</h2>
   <pre>
-  const mix = require('laravel-mix');
-
   mix.js('resources/js/app.js', 'public/js')
-      .react()
-      .sass('resources/sass/app.scss', 'public/css');
+    .react()
+    .sass('resources/sass/app.scss', 'public/css');
+
+mix.options({
+    postCss: [require('autoprefixer')]
+});
+mix.setPublicPath('public');
+mix.webpackConfig({
+    resolve: {
+        extensions: ['.js', '.vue'],
+        alias: {
+            '@': __dirname + 'resources'
+        }
+    },
+    output: {
+        chunkFilename: 'js/chunks/[name].js'
+    }
+})
+mix.js('resources/react/src/index.jsx', 'public/js/app.js').version();
   </pre>
  <h2>Step 7: npm run development</h2>
  <h2>Step 8: npm run watch</h2>
