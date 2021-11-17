@@ -19,7 +19,8 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
  <pre>b. set the routes/web.php "Route::get('/{any}', function () {return view('react');})->where('any', '.*');" to have single pages only.</pre>
 <h2>Then in the project root folder, you need to run the following commands. (*** run only in git bash)</h2>
 <pre>composer require laravel/ui</pre>
-<pre>php artisan ui react (If your Laravel version is lower than 7, you need to run “php artisan preset react” instead)</pre>
+<pre>php artisan ui react </pre>
+  <span>**If your Laravel version is lower than 7, you need to run “php artisan preset react” instead</span>
 <pre>npm install laravel-mix@latest --save-dev</pre>
 <pre>npm install && npm run dev</pre>
  
