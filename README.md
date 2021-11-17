@@ -28,7 +28,8 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
         Route::get('/{any}', function () {return view('welcome');})->where('any', '.*');
         Auth::routes();
    </pre>
-<h2>Then in the project root folder, you need to run the following commands. (*** run only in git bash)</h2>
+<h2>Then in the project root folder, you need to run the following commands. 
+  Note: run only in git bash</h2>
 <pre>composer require laravel/ui</pre>
 <pre>php artisan ui react </pre>
  <pre>npm install laravel-mix@latest --save-dev</pre>
