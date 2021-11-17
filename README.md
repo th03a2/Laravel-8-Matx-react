@@ -7,7 +7,9 @@ Insatall to your local machine a feshly install laravel 8 or  You can follow the
 
 coreui link: https://coreui.io/fd/?e=addtim52%40gmail.com&h=3898d3f1690d2bbf2bbc5331aa5d385c&utm_source=website&utm_medium=sendgrid&utm_campaign=website&affChecked=1&fbclid=IwAR06SP8RnNOjxgVn3xCRmC3VFlWMIXH106tkJPyMZcKjyvcL-CvHnncR1_Y
 
-<h3>Matx<h3>
+matx link: https://matx-react.ui-lib.com/dashboard/default
+
+<h3>React Js<h3>
   Download a react template, then copy and paste on the laravel project resources title react.
   
 <h2>Getting Started</h2>
