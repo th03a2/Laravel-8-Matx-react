@@ -41,7 +41,7 @@ matx link: https://matx-react.ui-lib.com/dashboard/default
 <pre>On your react Package.json, copy all dependencies and add to laravel Package.json dependencies to combine all react dependencies with laravel 8</pre>
 
 <h2>Step 3: Update Laravel devDependencies</h2>
-<pre> Go to package.json file</pre>
+<pre>add '"react-scripts": "^3.4.3"'</pre>
 <pre>On your both project, open the Package.json and update the devDependencies
       by combining all react devDependencies with laravel 8</pre>
    
