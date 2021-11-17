@@ -1,4 +1,4 @@
-# Laravel-8-Matx-react
+# Laravel-8- with React free Template (Matx|Coreui)
 Full stack Laravel 8 with Matx react.js<br>
 Youtube: https://www.youtube.com/watch?v=HVVpbpNUJ8M<br>
 
